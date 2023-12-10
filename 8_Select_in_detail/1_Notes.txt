@@ -1,0 +1,56 @@
+SQL(Structured Query Language)
+
+- Select command:
+	used to select any data from the database.
+	
+	SELECT col1, col2 FROM table_name; -- Basic Syntax
+	SELECT * FROM table_name; -- To Select ALL
+
+- Select command can be used with various clauses and operators.
+- Clauses:
+	1. Where
+	2. Limit
+	3. Order by
+	4. Group by
+	5. Having
+	6. Distinct
+
+- Operators:
+	1. Arithmetic operators:
+		1. + (addition)
+		2. - (subtraction)
+		3. * (multiplication)
+		4. / (division)
+		5. % (modulus)
+
+	2. Comparison operators:
+		1. equal to (=) 
+		2. not equal to (!= or <>) 
+		3. greater than (>) 
+		4. less than (<) 
+		5. greater than equal to (>=) 
+		6. less than equal to (<=) 
+
+	3. Logical operators:
+		1. AND
+		2. OR
+		3. NOT
+		4. IN
+		5. BETWEEN
+		6. ALL
+		7. LIKE
+		8. ANY
+
+	4. Bitwise operators:
+		1. & (Bitwise AND)
+		2. | (Bitwise OR)
+		3. ~ (Bitwise NOT)
+
+- General order of queries:
+
+SELECT column(s)
+FROM table_name
+WHERE condition
+GROUP BY column(s)
+HAVING condition
+ORDER BY column(s) ASC;
