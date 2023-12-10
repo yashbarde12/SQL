@@ -1,0 +1,63 @@
+SQL(Structured Query Language)
+
+- Database:
+	a database is a collection of data, arranged in  perticular order.
+	ex. 1.dictionary (collection of data, organised)
+            2.Telephone directory(collection of data, organised)
+
+- Why database:
+	1.Data security.
+	2.Data arranged in specific order.
+	3.Data retrieval is too fast.
+	4.Data manupulation is very fast.
+
+- DBMS (Database Management System):
+	DBMS is a way to achieve the database concept using various IDE's(Integrated Development Environment).
+	1. Relational Database Management System.
+	2. Hierarchial Database Management System.
+	3. Network Database Management System.
+	4. Object Oriented Database Management System.
+
+- Database => DBMS => RDBMS => SQL
+
+- RDBMS (Relational Database Management System):
+	In RDBMS, Data is stored in rows and columns i.e in table.
+	1. Relations = tables
+	2. Tuple = rows
+	3. Attributes = columns
+	4. No. of rows/tuples(cardinality)
+	5. No. of columns(degree)
+	6. Domain (Pool of values)
+
+- SQL:
+	SQL Stands for sturucture query language.
+	It is used to create database which will be there in the forms of rows and columns.
+	SQL is collection of different commands & for every work we have different command.
+
+- SQL commands are divided into:
+	1. DDL (Data Defination Language)
+	2. DML (Data Manupulation Language)
+	3. TCL & DCL (Transaction Control Language & Data Control Language)
+
+- Datatypes in SQL:
+	1. char: store character value
+	2. varchar: store character value
+	3. integer: store integer value
+	4. decimal: store decimal value
+	5. date: store date
+	6. time: store time
+
+- SQL Constraints: 
+	1. primanry key
+	2. foreign key
+	3. unique
+	4. not null
+	5. check
+	6. default
+	7. enum (one in multiple)
+	8. set (multiple in multiple)
+
+
+	
+	 
+ 
