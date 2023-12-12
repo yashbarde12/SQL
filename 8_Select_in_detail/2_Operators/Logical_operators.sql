@@ -81,6 +81,6 @@ select * from emp where name like 'P__';
 select * from emp where name like '%n';
 
 --  Employees who's name starts with 'a' and ends with 'a' contain 6 letters
-select * from emp where name like 'a____a'; -- SQL statements and names are case insensitive
+select * from emp where name like 'a____A'; -- SQL statements and names are case insensitive
 -- ------------------------------------------------
 -- ------------------------------------------------
