@@ -70,6 +70,8 @@ insert into emp (name,salary,bonus,perday,leaves_nos) values
 ("Jonathan",3000,200,100,5),
 ("Andy",6000,100,200,2);
 select * from emp;
+-- (underscore sign) _ is only specific for one character only
+-- (percent sign) % represents zero, one, or multiple characters
 
 -- Employees who's name start with 'J'
 select * from emp where name like 'J%';
