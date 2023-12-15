@@ -1,3 +1,5 @@
+-- __________________CASE_STUDY____________________
+-- ------------------------------------------------
 create database Evershine_FastFood;
 drop database Evershine_FastFood;
 use Evershine_FastFood;
@@ -58,7 +60,9 @@ insert into Sales (Cust_id, Menu_id, Order_date) values
 truncate table Sales;
 select * from Sales;
 
+-- ------------------------------------------------
 -- 1. What is the total amount each customer spent at the restaurant?
+
 SELECT s.Cust_id, c.Cust_Name, SUM(Price) AS Total_Spent
 FROM Sales AS s
 JOIN Customer AS c
@@ -67,13 +71,16 @@ JOIN Menu AS m
 ON s.Menu_id = m.Menu_id
 GROUP BY Cust_id; 
 
+-- ------------------------------------------------
 -- 2. How many days has each customer visited the restaurant?
+
 SELECT s.Cust_id, c.Cust_Name, COUNT(DISTINCT(s.Order_date)) AS Number_of_Visits
 FROM Sales s
 JOIN Customer c
 ON s.Cust_id = c.Cust_id
 GROUP BY Cust_id;
 
+-- ------------------------------------------------
 -- 3. What was the first item from the menu purchased by each customer?
 
 SELECT s.Cust_id, c.Cust_Name, s.Order_date, m.Menu_name,
@@ -98,7 +105,9 @@ FROM
 WHERE rank_table.item_rank=1
 GROUP BY Cust_id, Menu_name;
 
+-- ------------------------------------------------
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
 SELECT  s.Menu_id, Menu_name as Most_purchased_Item, (COUNT(s.Menu_id)) AS Number_of_times_purchased
 FROM Sales AS s
 JOIN Menu AS m
@@ -107,7 +116,9 @@ GROUP BY s.Menu_id, Menu_name
 ORDER BY Number_of_times_purchased DESC
 LIMIT 1;
 
+-- ------------------------------------------------
 -- 5. Which item was the most popular for each customer?
+
 SELECT s.Cust_id, c.Cust_Name, m.Menu_name, COUNT(m.Menu_id) AS order_count,
 DENSE_RANK() OVER(PARTITION BY s.Cust_id ORDER BY COUNT(s.Menu_id)DESC) as rnk 
 FROM Sales as s
@@ -130,7 +141,9 @@ FROM
 WHERE RNK=1
 GROUP BY Cust_id, Menu_name;
 
+-- ------------------------------------------------
 -- 6. Which item was purchased first by the customer after they became a member?
+
 SELECT s.Cust_id, c.Cust_Name, c.Join_date, s.Order_date, s.Menu_id,
 RANK() OVER(PARTITION BY s.Cust_id ORDER BY s.Order_date) as rnk
 FROM Sales as s
@@ -153,7 +166,9 @@ JOIN Menu
 ON Menu.Menu_id=amo.Menu_id
 WHERE rnk=1;
 
+-- ------------------------------------------------
 -- 7. Which item was purchased just before the customer became a member?
+
 SELECT s.Cust_id, c.Cust_Name, c.Join_date, s.Order_date, s.Menu_id,
 RANK() OVER(PARTITION BY s.Cust_id ORDER BY s.Order_date DESC) as rnk
 FROM Sales as s
@@ -176,7 +191,9 @@ JOIN Menu
 ON Menu.Menu_id = pmo.Menu_id
 WHERE rnk = 1;
 
+-- ------------------------------------------------
 -- 8. What is the total items and amount spent for each member before they became a member?
+
 SELECT s.Cust_id, Cust_Name, COUNT(s.Menu_id) as Total_orders_before_join_date, SUM(m.Price) as Amount_Spent
 FROM Customer as c
 JOIN Sales as s
@@ -186,7 +203,9 @@ ON m.Menu_id = s.Menu_id
 WHERE s.Order_date < c.Join_date
 GROUP BY s.Cust_id;
 
+-- ------------------------------------------------
 -- 9. If each Ruppe 1 spent equates to 10 points and Jumbo Burger has a 2x points multiplier - how many points would each customer have?
+
 SELECT s.Cust_id, Cust_Name,
 SUM(CASE WHEN m.Menu_name = 'Jumbo Burger' THEN Price*20 ELSE Price*10 END) as Total_Points
 FROM Sales as s
