@@ -1,0 +1,61 @@
+SQL(Structured Query Language)
+
+- SQL Joins:
+    Join is used to combine rows from two or more tables, based on a related column between them.
+
+- For doing join operations, atleast one column must be common in tables (Relations)
+
+- Types of Joins:
+    1. Inner Join
+    2. Outer Join:
+        a. Left outer join (left join)
+        b. Right outer join (right join)
+        c. Full outer join (full join)
+    3. Cross Join
+    4. Self Join
+
+- Inner join:
+    Returns records that have matching values in both tables.
+    Rejects unmatching rows.
+    Syntax: 
+        SELECT column(s)
+        FROM tableA
+        INNER JOIN tableB
+        ON tableA.col_name = tableB.col_name;
+
+- Outer Join:
+1. Left outer join (left join):
+    Returns all records from the left table, and the matched records from the right table
+    Syntax: 
+        SELECT column(s)
+        FROM tableA
+        LEFT JOIN tableB
+        ON tableA.col_name = tableB.col_name;
+
+2. Right outer join (right join):
+    Returns all records from the right table, and the matched records from the left table
+    Syntax: 
+        SELECT column(s)
+        FROM tableA
+        RIGHT JOIN tableB
+        ON tableA.col_name = tableB.col_name;
+
+3. Full outer join (full join):
+    Returns all records when there is a match in either left or right table.
+    Full join is union of left and right join. 
+    (LEFT JOIN  UNION  RIGHT JOIN)
+
+- Cross Join:
+    A cross join, also known as a Cartesian product (cross product).
+    It generates a result set that contains all possible combinations of rows from both tables.
+    Syntax: 
+        SELECT columns
+        FROM table1
+        CROSS JOIN table2;
+
+- Self Join:
+    It is a regular join but the table is joined with itself.
+    Syntax:
+        SELECT columns
+        FROM table1 AS alias1
+        JOIN table1 AS alias2 ON alias1.column = alias2.column;
