@@ -27,7 +27,7 @@ select * from employee;
 insert into employee(emp_id, name, age, gender, doj, salary, skills, phone)
 values(101, "Jim", 21, "m", "2023-08-12",50000,"java,python","9403642310");
 
-insert into employee values(102, "kunal", 22, "m", "2023-07-23",45000,"python","9445642310"),
+insert into employee value(102, "kunal", 22, "m", "2023-07-23",45000,"python","9445642310"),
 (103, "Pam", 20, "f", "2023-09-23",50000,"python","9453452310"),
 (104, "Ryan", 26, "m", "2023-07-13",48000,"python","9445132310"),
 (105, "Dwight", 25, "m", "2023-07-26",45500,"python","9436642310") ;
