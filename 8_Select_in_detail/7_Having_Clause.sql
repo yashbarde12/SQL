@@ -4,7 +4,7 @@ Similar to Where i.e. applies some condition on rows.
 Used when we want to apply any condition after grouping.
 The HAVING clause is used with GROUP BY to filter groups 
 based on aggregate function results.
-It's similar to the WHERE clause but operates on grouped data.
+It is similar to the WHERE clause but operates on grouped data.
 */
 -- ------------------------------------------------
 create database employee_db;
