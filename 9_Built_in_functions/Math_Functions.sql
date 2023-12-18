@@ -1,6 +1,6 @@
 -- Math Functions
 -- ------------------------------------------------
--- Abstract function : returns abstrach value
+-- Abstract function : returns abstract value
 select abs(12); -- 12
 select abs(-13); -- 13
 select abs(-23.3); -- 23.3
@@ -9,10 +9,12 @@ select abs(-23.3); -- 23.3
 select ceil(12.2); -- 13
 select ceil(12.0); -- 12
 select ceil(12.99); -- 13
+select ceil(-12.5); -- -12
 
 -- ------------------------------------------------
 select floor(13.99); -- 13
 select floor(13.0); -- 13
+select floor(-13.25); -- -14
 
 -- ------------------------------------------------
 select mod(10, 2); -- 0 
