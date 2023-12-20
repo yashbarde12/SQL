@@ -73,8 +73,10 @@ emp_id int primary key,
 name varchar(20) not null,
 salary decimal(8,2) not null,
 dept_code int references dept.dept_code); 
--- OR WE CAN ADD LIKE THIS   dept_code int,
--- 						     foreign key(dept_code) references dept(dept_code)
+-- ----OR WE CAN ADD LIKE THIS----   
+-- dept_code int,
+-- foreign key(dept_code) references dept(dept_code)
+
 drop table emp;
 desc emp;
 -- --------------------------------------------------------
