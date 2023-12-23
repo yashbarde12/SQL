@@ -2,4 +2,4 @@
 SQL (Structured Query Language)
 - My notes
 - Case study
-- Assignments
+- Practice tasks
