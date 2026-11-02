@@ -9,7 +9,7 @@ SQL(Structured Query Language)
 	1.Data security.
 	2.Data arranged in specific order.
 	3.Data retrieval is too fast.
-	4.Data manupulation is very fast.
+	4.Data manipulation is very fast.
 
 - DBMS (Database Management System):
 	DBMS is a way to achieve the database concept using various IDE's(Integrated Development Environment).
@@ -36,7 +36,7 @@ SQL(Structured Query Language)
 
 - SQL commands are divided into:
 	1. DDL (Data Defination Language)
-	2. DML (Data Manupulation Language)
+	2. DML (Data Manipulation Language)
 	3. TCL & DCL (Transaction Control Language & Data Control Language)
 
 - Datatypes in SQL:
